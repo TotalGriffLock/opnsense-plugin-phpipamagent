@@ -4,6 +4,7 @@
         <label>MySQL Host</label>
         <type>text</type>
         <help>Hostname or IP address of MySQL server hosting the IPAM database</help>
+        <ValidationMessage>Please specify a valid hostname or IP</ValidationMessage>
     </field>
     <field>
         <id>phpipamagent.general.DBPort</id>
@@ -11,23 +12,27 @@
         <type>text</type>
         <help>Port number for the MySQL server hosting the IPAM database</help>
         <hint>usually 3306</hint>
+        <ValidationMessage>Please specify a valid port number</ValidationMessage>
     </field>
     <field>
         <id>phpipamagent.general.DBUser</id>
         <label>MySQL Username</label>
         <type>text</type>
         <help>Username for the MySQL server hosting the IPAM database</help>
+        <ValidationMessage>Please enter a valid username</ValidationMessage>
     </field>
     <field>
         <id>phpipamagent.general.DBPass</id>
         <label>MySQL Password</label>
         <type>password</type>
         <help>Password for the MySQL server hosting the IPAM database</help>
+        <ValidationMessage>Please enter a valid password</ValidationMessage>
     </field>
     <field>
         <id>phpipamagent.general.AgentCode</id>
         <label>phpIPAM Agent Code</label>
         <type>text</type>
         <help>Agent Code as created in phpIPAM Administration -&gt;Scan agents</help>
+        <ValidationMessage>Please enter an agent code</ValidationMessage>
     </field>
  </form>
