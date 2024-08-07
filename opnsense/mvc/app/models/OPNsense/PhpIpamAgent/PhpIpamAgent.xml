@@ -7,8 +7,9 @@
         <!-- container -->
         <general>
             <!-- fields -->
-            <DBHost type="NetworkField">
+            <DBHost type="HostnameField">
                 <Required>Y</Required>
+                <IpAllowed>Y</IpAllowed>
             </DBHost>
             <DBPort type="PortField">
                 <Required>Y</Required>
