@@ -8,7 +8,8 @@ use \OPNsense\Core\Config;
 class SettingsController extends ApiControllerBase
 {
 }
-* retrieve PhpIpamAgent general settings
+/**
+ * retrieve PhpIpamAgent general settings
  * @return array general settings
  */
 public function getAction()
