@@ -16,7 +16,7 @@ class ServiceController extends ApiControllerBase
             $status = "ok";
         }
     }
-    return array("status" => $status);
+    return array("message" => $status);
 }
 
   public function discoAction()
