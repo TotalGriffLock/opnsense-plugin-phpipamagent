@@ -16,15 +16,18 @@
         <id>phpipamagent.general.DBUser</id>
         <label>MySQL Username</label>
         <type>text</type>
+        <help>Username for the MySQL server hosting the IPAM database</help>
     </field>
     <field>
         <id>phpipamagent.general.DBPass</id>
         <label>MySQL Password</label>
         <type>password</type>
+        <help>Password for the MySQL server hosting the IPAM database</help>
     </field>
     <field>
         <id>phpipamagent.general.AgentCode</id>
         <label>phpIPAM Agent Code</label>
         <type>text</type>
+        <help>Agent Code as created in phpIPAM Administration -&gt;Scan agents</help>
     </field>
  </form>
