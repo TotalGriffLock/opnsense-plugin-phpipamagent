@@ -8,6 +8,7 @@ This plugin uses the phpIPAM agent from https://github.com/phpipam/phpipam-agent
 For now, this is not bundled as a plugin, so to install get a shell on your OPNsense and run
 ```
 cd ~
+rm -Rf opnsense-plugin-phpipamagent
 git clone https://github.com/TotalGriffLock/opnsense-plugin-phpipamagent opnsense-plugin-phpipamagent
 cp -R ~/opnsense-plugin-phpipamagent/opnsense /usr/local/
 service configd restart
