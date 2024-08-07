@@ -40,7 +40,7 @@ public function setAction()
             if (!array_key_exists("validations", $result)) {
                 $result["validations"] = array();
             }
-            $result["validations"]["general.".$msg->getField()] = $msg->getMessage();
+            $result["validations"]["phpipamagent.".$msg->getField()] = $msg->getMessage();
         }
 
         // serialize model to config and save
