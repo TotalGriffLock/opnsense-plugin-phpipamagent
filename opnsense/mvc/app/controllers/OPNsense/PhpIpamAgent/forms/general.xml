@@ -1,5 +1,20 @@
 <form>
     <field>
+        <type>header</type>
+        <label>IPAM Settings</label>
+    </field>
+    <field>
+        <id>phpipamagent.general.AgentCode</id>
+        <label>phpIPAM Agent Code</label>
+        <type>text</type>
+        <help>Agent Code as created in phpIPAM Administration -&gt;Scan agents</help>
+        <ValidationMessage>Please enter an agent code</ValidationMessage>
+    </field>
+    <field>
+        <type>header</type>
+        <label>Database Settings</label>
+    </field>
+    <field>
         <id>phpipamagent.general.DBHost</id>
         <label>MySQL Host</label>
         <type>text</type>
@@ -34,12 +49,5 @@
         <type>text</type>
         <help>Name of the MySQL IPAM database</help>
         <ValidationMessage>Please enter a valid database name</ValidationMessage>
-    </field>
-    <field>
-        <id>phpipamagent.general.AgentCode</id>
-        <label>phpIPAM Agent Code</label>
-        <type>text</type>
-        <help>Agent Code as created in phpIPAM Administration -&gt;Scan agents</help>
-        <ValidationMessage>Please enter an agent code</ValidationMessage>
     </field>
  </form>
