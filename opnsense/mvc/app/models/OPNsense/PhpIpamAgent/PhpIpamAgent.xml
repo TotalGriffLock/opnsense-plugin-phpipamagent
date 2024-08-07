@@ -10,14 +10,14 @@
             <DBHost type="NetworkField">
                 <Required>Y</Required>
             </DBHost>
-			<DBPort type="PortField">
+            <DBPort type="PortField">
                 <Required>Y</Required>
-				<Default>3306</Default>
+                <Default>3306</Default>
             </DBPort>
-			<DBUser type="TextField">
+            <DBUser type="TextField">
                 <Required>Y</Required>
             </DBUser>
-			<DBPass type="UpdateOnlyTextField">
+            <DBPass type="UpdateOnlyTextField">
                 <Required>Y</Required>
             </DBPass>
             <AgentCode type="TextField">
