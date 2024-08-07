@@ -1,0 +1,28 @@
+<model>
+    <mount>//OPNsense/phpipamagent</mount>
+    <description>
+        Scanning agent for phpIPAM
+    </description>
+    <items>
+        <!-- container -->
+        <general>
+            <!-- fields -->
+            <DBHost type="NetworkField">
+                <Required>Y</Required>
+            </DBHost>
+			<DBPort type="PortField">
+                <Required>Y</Required>
+				<Default>3306</Default>
+            </DBPort>
+			<DBUser type="TextField">
+                <Required>Y</Required>
+            </DBUser>
+			<DBPass type="UpdateOnlyTextField">
+                <Required>Y</Required>
+            </DBPass>
+            <AgentCode type="TextField">
+                <Required>Y</Required>
+            </AgentCode>
+        </general>
+    </items>
+</model>
