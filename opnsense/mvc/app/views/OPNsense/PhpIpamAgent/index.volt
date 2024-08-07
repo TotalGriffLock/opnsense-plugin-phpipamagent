@@ -14,6 +14,7 @@
                 // action to run after successful save, for example reconfigure service.
                 ajaxCall(url="/api/phpipamagent/service/reload", sendData={},callback=function(data,status) {
                   // action to run after reload
+    $("#responseMsg").removeClass("hidden");
                   $("#responseMsg").html(data['message']);
                 });
             });
