@@ -21,7 +21,7 @@
         });
 $("#discoAct").click(function(){
     $("#responseMsg").removeClass("hidden");
-    ajaxCall(url="/api/phpipamagent/service/phpipamagentdiscover", sendData={},callback=function(data,status) {
+    ajaxCall(url="/api/phpipamagent/service/disco", sendData={},callback=function(data,status) {
         // action to run after reload
         $("#responseMsg").html(data['message']);
     });
@@ -29,7 +29,7 @@ $("#discoAct").click(function(){
 
 $("#updateAct").click(function(){
     $("#responseMsg").removeClass("hidden");
-    ajaxCall(url="/api/phpipamagent/service/phpipamagentupdate", sendData={},callback=function(data,status) {
+    ajaxCall(url="/api/phpipamagent/service/update", sendData={},callback=function(data,status) {
         // action to run after reload
         $("#responseMsg").html(data['message']);
     });
