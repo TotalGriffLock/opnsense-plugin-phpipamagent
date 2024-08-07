@@ -29,6 +29,8 @@ configctl service restart webgui
 ## Usage
 Create the scan agent in phpIPAM's Administration menu
 
+Follow the instructions from https://github.com/phpipam/phpipam-agent/ to set up MySQL permissions (the 'GRANT' commands)
+
 Navigate to Services -> phpIPAM Agent -> Configuration in the OPNsense menu
 
 Fill out your Agent Code from phpIPAM, and all your database settings. Click Save and click Run one-off discovery. This will test the database connection out and check the agent code is valid.
