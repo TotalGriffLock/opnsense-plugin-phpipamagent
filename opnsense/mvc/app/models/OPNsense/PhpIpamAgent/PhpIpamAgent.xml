@@ -1,8 +1,7 @@
 <model>
     <mount>//OPNsense/phpipamagent</mount>
-    <description>
-        Scanning agent for phpIPAM
-    </description>
+    <description>Scanning agent for phpIPAM</description>
+    <version>1.0.0</version>
     <items>
         <!-- container -->
         <general>
