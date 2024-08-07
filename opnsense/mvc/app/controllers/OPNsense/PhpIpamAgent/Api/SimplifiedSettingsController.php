@@ -1,3 +1,4 @@
+<?php
 namespace OPNsense\PhpIpamAgent\Api;
 
 use \OPNsense\Base\ApiControllerBase;
