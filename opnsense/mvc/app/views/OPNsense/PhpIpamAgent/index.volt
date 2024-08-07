@@ -42,6 +42,7 @@ $("#updateAct").click(function(){
     <button class="btn btn-primary"  id="discoAct" type="button"><b>{{ lang._('Run one-off discovery') }}</b></button>
     <button class="btn btn-primary"  id="updateAct" type="button"><b>{{ lang._('Run one-off update') }}</b></button>
 </div>
+<br/>
 <div class="alert alert-info hidden" role="alert" id="responseMsg">
 
 </div>
