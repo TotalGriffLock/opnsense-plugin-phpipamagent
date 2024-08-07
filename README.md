@@ -9,6 +9,6 @@ For now, this is not bundled as a plugin, so to install get a shell on your OPNs
 ```
 cd ~
 git clone https://github.com/TotalGriffLock/opnsense-plugin-phpipamagent opnsense-plugin-phpipamagent
-mv ~/opnsense-plugin-phpipamagent /usr/local
+cp -R ~/opnsense-plugin-phpipamagent/opnsense /usr/local/
 service configd restart
 ```
