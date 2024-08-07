@@ -29,6 +29,13 @@
         <ValidationMessage>Please enter a valid password</ValidationMessage>
     </field>
     <field>
+        <id>phpipamagent.general.DBName</id>
+        <label>MySQL Database Name</label>
+        <type>text</type>
+        <help>Name of the MySQL IPAM database</help>
+        <ValidationMessage>Please enter a valid database name</ValidationMessage>
+    </field>
+    <field>
         <id>phpipamagent.general.AgentCode</id>
         <label>phpIPAM Agent Code</label>
         <type>text</type>
