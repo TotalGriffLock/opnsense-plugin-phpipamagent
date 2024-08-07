@@ -27,8 +27,12 @@ service configd restart
 configctl service restart webgui
 ```
 ## Usage
-Create the scan agent in phpIpam's Administration menu
+Create the scan agent in phpIPAM's Administration menu
+
 Navigate to Services -> phpIPAM Agent -> Configuration in the OPNsense menu
+
 Fill out your Agent Code from phpIPAM, and all your database settings. Click Save and click Run one-off discovery. This will test the database connection out and check the agent code is valid.
+
 Assign some subnets to this agent in phpIPAM
+
 Create some cron jobs in OPNsense to run regular scans at System -> Settings -> Cron. The commands to add are "Run an IPAM discovery task" and "Run an IPAM update task"
