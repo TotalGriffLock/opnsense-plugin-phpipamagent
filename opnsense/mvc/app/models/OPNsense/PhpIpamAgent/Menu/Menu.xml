@@ -1,0 +1,6 @@
+<menu>
+    <!-- Plugin PhpIpamAgent menu -->
+    <Services order="999">
+        <PhpIpamAgent VisibleName="phpIPAM Agent" url="/ui/phpipamagent/"/>
+    </Services>
+</menu>
