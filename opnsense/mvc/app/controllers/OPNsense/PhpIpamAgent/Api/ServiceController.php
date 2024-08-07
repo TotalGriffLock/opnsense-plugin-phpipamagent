@@ -18,4 +18,30 @@ class ServiceController extends ApiControllerBase
     }
     return array("status" => $status);
 }
+
+  public function discoAction()
+{
+    if ($this->request->isPost()) {
+        $backend = new Backend();
+        $bckresult = json_decode(trim($backend->configdRun("phpipamagent phpipamagentdiscover")), true);
+        if ($bckresult !== null) {
+            // only return valid json type responses
+            return $bckresult;
+        }
+    }
+    return array("message" => "unable to run configd discovery action");
+}
+
+    public function updateAction()
+{
+    if ($this->request->isPost()) {
+        $backend = new Backend();
+        $bckresult = json_decode(trim($backend->configdRun("phpipamagent phpipamagentupdate")), true);
+        if ($bckresult !== null) {
+            // only return valid json type responses
+            return $bckresult;
+        }
+    }
+    return array("message" => "unable to run configd update action");
+}
 }
