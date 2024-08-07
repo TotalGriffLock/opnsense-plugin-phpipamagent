@@ -3,14 +3,14 @@
 {{ partial("layout_partials/base_form",['fields':generalForm,'id':'frm_GeneralSettings'])}}
 <script type="text/javascript">
     $( document ).ready(function() {
-        var data_get_map = {'frm_GeneralSettings':"/api/phpipamagent/settings/get"};
+        var data_get_map = {'frm_GeneralSettings':"/api/phpipamagent/simplifiedsettings/get"};
         mapDataToFormUI(data_get_map).done(function(data){
             // place actions to run after load, for example update form styles.
         });
 
         // link save button to API set action
         $("#saveAct").click(function(){
-            saveFormToEndpoint(url="/api/phpipamagent/settings/set",formid='frm_GeneralSettings',callback_ok=function(){
+            saveFormToEndpoint(url="/api/phpipamagent/simplifiedsettings/set",formid='frm_GeneralSettings',callback_ok=function(){
                 // action to run after successful save, for example reconfigure service.
             });
         });
