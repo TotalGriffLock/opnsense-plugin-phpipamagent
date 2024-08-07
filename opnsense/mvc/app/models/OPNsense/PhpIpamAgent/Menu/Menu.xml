@@ -1,6 +1,6 @@
 <menu>
     <Services>
-        <ipamAgent visibleName="phpIPAM Agent" cssClass="fa fa-network-wired fa-fw">
+        <ipamAgent visibleName="phpIPAM Agent" cssClass="fa fa-list-ol fa-fw">
             <Configuration order="10" url="/ui/phpipamagent" />
             <Logs order="20" url="/ui/phpipamagent/logs" />
         </ipamAgent>
