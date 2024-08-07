@@ -25,3 +25,6 @@
 <div class="col-md-12">
     <button class="btn btn-primary"  id="saveAct" type="button"><b>{{ lang._('Save') }}</b></button>
 </div>
+<div class="alert alert-info hidden" role="alert" id="responseMsg">
+
+</div>
