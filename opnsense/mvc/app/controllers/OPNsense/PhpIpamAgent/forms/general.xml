@@ -1,0 +1,30 @@
+<form>
+    <field>
+        <id>phpipamagent.general.DBHost</id>
+        <label>MySQL Host</label>
+        <type>text</type>
+        <help>Hostname or IP address of MySQL server hosting the IPAM database</help>
+    </field>
+    <field>
+        <id>phpipamagent.general.DBPort</id>
+        <label>MySQL Port</label>
+        <type>text</type>
+        <help>Port number for the MySQL server hosting the IPAM database</help>
+        <hint>usually 3306</hint>
+    </field>
+    <field>
+        <id>phpipamagent.general.DBUser</id>
+        <label>MySQL Username</label>
+        <type>text</type>
+    </field>
+    <field>
+        <id>phpipamagent.general.DBPass</id>
+        <label>MySQL Password</label>
+        <type>password</type>
+    </field>
+    <field>
+        <id>phpipamagent.general.AgentCode</id>
+        <label>phpIPAM Agent Code</label>
+        <type>text</type>
+    </field>
+ </form>
