@@ -12,4 +12,5 @@ rm -Rf opnsense-plugin-phpipamagent
 git clone https://github.com/TotalGriffLock/opnsense-plugin-phpipamagent opnsense-plugin-phpipamagent
 cp -R ~/opnsense-plugin-phpipamagent/opnsense /usr/local/
 service configd restart
+configctl service restart webgui
 ```
