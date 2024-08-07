@@ -37,4 +37,4 @@ Fill out your Agent Code from phpIPAM, and all your database settings. Click Sav
 
 Assign some subnets to this agent in phpIPAM
 
-Create some cron jobs in OPNsense to run regular scans at System -> Settings -> Cron. The commands to add are "Run an IPAM discovery task" and "Run an IPAM update task"
+Create some cron jobs in OPNsense to run regular scans at System -> Settings -> Cron. The commands to add are "Run an IPAM discovery task" and "Run an IPAM update task". The agent author recommends both to run every 15 minutes.
