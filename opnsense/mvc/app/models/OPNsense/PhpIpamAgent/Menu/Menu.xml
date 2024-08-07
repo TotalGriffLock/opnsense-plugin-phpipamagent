@@ -1,5 +1,4 @@
 <menu>
-    <!-- Plugin PhpIpamAgent menu -->
     <Services>
         <PhpIpamAgent VisibleName="phpIPAM Agent" cssClass="fa fa-network-wired fa-fw">
             <PhpIpamAgentConfig VisibleName="Configuration" url="/ui/phpipamagent/"/ cssClass="fa fa-cogs fa-fw">
