@@ -1,7 +1,7 @@
 <model>
     <mount>//OPNsense/phpipamagent</mount>
     <description>Scanning agent for phpIPAM</description>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <items>
         <!-- container -->
         <general>
@@ -20,6 +20,9 @@
             <DBPass type="UpdateOnlyTextField">
                 <Required>Y</Required>
             </DBPass>
+            <DBName type="TextField">
+                <Required>Y</Required>
+            </DBName>
             <AgentCode type="TextField">
                 <Required>Y</Required>
             </AgentCode>
