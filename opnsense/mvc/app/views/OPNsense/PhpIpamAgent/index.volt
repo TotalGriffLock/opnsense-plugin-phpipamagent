@@ -14,10 +14,25 @@
                 // action to run after successful save, for example reconfigure service.
                 ajaxCall(url="/api/phpipamagent/service/reload", sendData={},callback=function(data,status) {
                   // action to run after reload
+                  $("#responseMsg").html(data['message']);
                 });
             });
         });
+$("#discoAct").click(function(){
+    $("#responseMsg").removeClass("hidden");
+    ajaxCall(url="/api/phpipamagent/service/phpipamagentdiscover", sendData={},callback=function(data,status) {
+        // action to run after reload
+        $("#responseMsg").html(data['message']);
+    });
+});
 
+$("#updateAct").click(function(){
+    $("#responseMsg").removeClass("hidden");
+    ajaxCall(url="/api/phpipamagent/service/phpipamagentupdate", sendData={},callback=function(data,status) {
+        // action to run after reload
+        $("#responseMsg").html(data['message']);
+    });
+});
 
     });
 </script>
