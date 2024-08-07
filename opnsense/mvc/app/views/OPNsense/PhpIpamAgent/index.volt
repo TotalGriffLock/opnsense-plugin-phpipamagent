@@ -1,4 +1,3 @@
-<h1>phpIPAM Agent</h1>
 <div>Configure your phpIPAM Agent here<br>You should have already created an entry for the agent in phpIPAM before you fill out this form</div>
 <div>Once set up, you can create cron jobs for discovery and update scans <a href="/ui/cron">here</a>.
 {{ partial("layout_partials/base_form",['fields':generalForm,'id':'frm_GeneralSettings'])}}
