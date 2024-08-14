@@ -1,11 +1,9 @@
 <model>
     <mount>//OPNsense/phpipamagent</mount>
     <description>Scanning agent for phpIPAM</description>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <items>
-        <!-- container -->
         <general>
-            <!-- fields -->
             <DBHost type="HostnameField">
                 <Required>Y</Required>
                 <IpAllowed>Y</IpAllowed>
@@ -26,6 +24,18 @@
             <AgentCode type="TextField">
                 <Required>Y</Required>
             </AgentCode>
+            <Threads type="NumericField">
+                <Required>Y</Required>
+                <Default>32</Default>
+            </Threads>
+            <ResetAutodiscover type="BooleanField">
+                <Required>Y</Required>
+                <Default>false</Default>
+            </ResetAutodiscover>
+            <RemoveInactiveDHCP type="BooleanField">
+                <Required>Y</Required>
+                <Default>false</Default>
+            </RemoveInactiveDHCP>        
         </general>
     </items>
 </model>
