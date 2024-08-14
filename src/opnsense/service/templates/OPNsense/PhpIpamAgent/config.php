@@ -6,10 +6,7 @@ $config['type'] = "mysql";
 $config['method'] 	= "fping";
 $config['pingpath'] = "/usr/local/sbin/fping";
 $config['nonthreaded'] = false;
-$config['threads']  = 32;
 $config['sendmail'] = false;
-$config['reset_autodiscover_addresses'] = false;
-$config['remove_inactive_dhcp']         = false;
 
 // Settings from configuration page
 $config['db']['host'] = "{{ OPNsense.phpipamagent.general.DBHost|default("") }}";
@@ -18,6 +15,9 @@ $config['db']['pass'] = "{{ OPNsense.phpipamagent.general.DBPass|default("") }}"
 $config['db']['name'] = "{{ OPNsense.phpipamagent.general.DBName|default("") }}";
 $config['db']['port'] = {{ OPNsense.phpipamagent.general.DBPort|default("") }};
 $config['key'] = "{{ OPNsense.phpipamagent.general.AgentCode|default("") }}";
+$config['threads']  = {{ OPNsense.phpipamagent.general.Threads|default("") }};
+$config['reset_autodiscover_addresses'] = {{ OPNsense.phpipamagent.general.ResetAutodiscover|default("") }};
+$config['remove_inactive_dhcp']         = {{ OPNsense.phpipamagent.general.RemoveInactiveDHCP|default("") }};;
 
 // SSL Stuff
 $config['db']['ssl']        = false;
