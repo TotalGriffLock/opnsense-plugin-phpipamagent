@@ -1,0 +1,16 @@
+phpIPAM is a popular web based IP Address Management system
+It incorporates functionality for a scan agent to be deployed remotely,
+regularly scan subnets for active devices and maintain this information
+in the central IPAM database.
+
+This plugin allows you to run the phpIPAM scan agent directly on your
+OPNsense firewall, saving the overhead of deploying additional resources
+just to perform IP scans.
+
+phpIPAM: https://phpipam.net/
+Plugin: https://github.com/TotalGriffLock/opnsense-plugin-phpipamagent
+
+Plugin Changelog
+----------------
+
+0.1  Initial release
