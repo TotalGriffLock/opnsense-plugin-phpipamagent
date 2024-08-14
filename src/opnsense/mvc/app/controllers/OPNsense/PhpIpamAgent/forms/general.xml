@@ -50,4 +50,27 @@
         <help>Name of the MySQL IPAM database</help>
         <ValidationMessage>Please enter a valid database name</ValidationMessage>
     </field>
+    <field>
+        <type>header</type>
+        <label>Scan Agent Settings</label>
+    </field>
+    <field>
+        <id>phpipamagent.general.Threads</id>
+        <label>Concurrent Scan Threads</label>
+        <type>text</type>
+        <help>Number of concurrent pings to run at once</help>
+        <ValidationMessage>Please enter a valid number</Validationmessage>
+    </field>
+    <field>
+        <id>phpipamagent.general.ResetAutodiscover</id>
+        <label>Reset Autodiscover Addresses</label>
+        <type>checkbox</type>
+        <help>Removes addresses if description -- autodiscovered -- and host is offline</help>
+    </field>
+    <field>
+        <id>phpipamagent.general.RemoveInactiveDHCP</id>
+        <label>Remove Inactive DHCP Addresses</label>
+        <type>checkbox</type>
+        <help>Removes inactive addresses with a state of 4</help>
+    </field>
  </form>
