@@ -7,7 +7,7 @@ This plugin uses the phpIPAM agent from https://github.com/phpipam/phpipam-agent
 ## Important
 This incorporates work from both https://github.com/phpipam/phpipam-agent/ and from https://medium.com/@mihakralj/the-direct-route-installing-freebsd-packages-on-opnsense-d002ac0c56b8 - it is in no way all my own work nor do I claim it to be
 
-## Installation
+## Manual Installation
 For now, this is not bundled as a plugin, so to install get a shell on your OPNsense and run
 ```
 cd ~
@@ -21,12 +21,25 @@ echo y | sh opnsense-plugin-phpipamagent/FreeBSD_sideload.sh php82-gmp
 echo y | sh opnsense-plugin-phpipamagent/FreeBSD_sideload.sh php82-pdo_mysql
 echo y | sh opnsense-plugin-phpipamagent/FreeBSD_sideload.sh php82-iconv
 echo y | sh opnsense-plugin-phpipamagent/FreeBSD_sideload.sh php82-posix
-rm -Rf /usr/local/share/phpipam-agent
-mv phpipam-agent /usr/local/share/phpipam-agent
-cp -R ~/opnsense-plugin-phpipamagent/opnsense /usr/local/
+rm -Rf /usr/local/opnsense/scripts/phpipamagent
+mv phpipam-agent /usr/local/opnsense/scripts/phpipamagent
+cp -R ~/opnsense-plugin-phpipamagent/src/opnsense /usr/local/
 service configd restart
 configctl service restart webgui
 ```
+
+## Building The Plugin
+To build the plugin from source:
+Set up OPNsense tools as per https://github.com/opnsense/tools - you can do this on an OPNsense VM or a FreeBSD box
+Run the following commands in the tools environment
+```
+cd /usr/plugins/devel/
+git clone --recursive https://github.com/TotalGriffLock/opnsense-plugin-phpipamagent /usr/plugins/devel/phpipamagent
+git clone --recursive https://github.com/phpipam/phpipam-agent /usr/plugins/devel/phpipamagent/src/opnsense/scripts/phpipamagent
+cd /usr/tools
+make plugins
+```
+This should result in /
 ## Usage
 Create the scan agent in phpIPAM's Administration menu
 
