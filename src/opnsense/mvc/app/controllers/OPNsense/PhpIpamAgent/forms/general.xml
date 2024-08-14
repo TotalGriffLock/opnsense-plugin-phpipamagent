@@ -65,7 +65,7 @@
         <id>phpipamagent.general.ResetAutodiscover</id>
         <label>Reset Autodiscover Addresses</label>
         <type>checkbox</type>
-        <help>Removes addresses if description -- autodiscovered -- and host is offline</help>
+        <help>Removes addresses if description -- autodiscovered -- and host is offline. Note hosts are removed based on the 'Ping status intervals' setting in phpIPAM.</help>
     </field>
     <field>
         <id>phpipamagent.general.RemoveInactiveDHCP</id>
