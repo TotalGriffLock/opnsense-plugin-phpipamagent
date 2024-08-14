@@ -71,6 +71,6 @@
         <id>phpipamagent.general.RemoveInactiveDHCP</id>
         <label>Remove Inactive DHCP Addresses</label>
         <type>checkbox</type>
-        <help>Removes inactive addresses with a state of 4</help>
+        <help>Removes inactive addresses marked with a DHCP tag in phpIPAM</help>
     </field>
  </form>
