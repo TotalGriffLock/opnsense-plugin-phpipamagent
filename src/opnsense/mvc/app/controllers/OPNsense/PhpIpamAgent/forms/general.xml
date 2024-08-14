@@ -59,7 +59,7 @@
         <label>Concurrent Scan Threads</label>
         <type>text</type>
         <help>Number of concurrent pings to run at once</help>
-        <ValidationMessage>Please enter a valid number</Validationmessage>
+        <ValidationMessage>Please enter a valid number</ValidationMessage>
     </field>
     <field>
         <id>phpipamagent.general.ResetAutodiscover</id>
