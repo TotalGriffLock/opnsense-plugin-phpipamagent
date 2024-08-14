@@ -13,13 +13,14 @@ For now, this is not bundled as a plugin, so to install get a shell on your OPNs
 cd ~
 rm -Rf opnsense-plugin-phpipamagent
 rm -Rf phpipam-agent
+pkg install git
+pkg install fping
 git clone --recursive https://github.com/TotalGriffLock/opnsense-plugin-phpipamagent opnsense-plugin-phpipamagent
 git clone --recursive https://github.com/phpipam/phpipam-agent/ phpipam-agent
 echo y | sh opnsense-plugin-phpipamagent/FreeBSD_sideload.sh php82-gmp
 echo y | sh opnsense-plugin-phpipamagent/FreeBSD_sideload.sh php82-pdo_mysql
 echo y | sh opnsense-plugin-phpipamagent/FreeBSD_sideload.sh php82-iconv
 echo y | sh opnsense-plugin-phpipamagent/FreeBSD_sideload.sh php82-posix
-echo y | sh opnsense-plugin-phpipamagent/FreeBSD_sideload.sh php82-pear-Net_Ping
 rm -Rf /usr/local/share/phpipam-agent
 mv phpipam-agent /usr/local/share/phpipam-agent
 cp -R ~/opnsense-plugin-phpipamagent/opnsense /usr/local/
