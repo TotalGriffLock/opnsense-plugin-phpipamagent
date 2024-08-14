@@ -10,31 +10,33 @@
 
         // link save button to API set action
         $("#saveAct").click(function(){
+            $("#responseMsg").addClass("hidden");
+            $("#responseMsg").html("");
             saveFormToEndpoint(url="/api/phpipamagent/settings/set",formid='frm_GeneralSettings',callback_ok=function(){
                 // action to run after successful save, for example reconfigure service.
                 ajaxCall(url="/api/phpipamagent/service/reload", sendData={},callback=function(data,status) {
                   // action to run after reload
-    $("#responseMsg").removeClass("hidden");
-                  $("#responseMsg").html(data['message']);
+                  $("#responseMsg").removeClass("hidden");
+                  $("#responseMsg").html(data['message'].replace(/\n/g,'<br/>'));
                 });
             });
         });
-$("#discoAct").click(function(){
-    $("#responseMsg").removeClass("hidden");
-    ajaxCall(url="/api/phpipamagent/service/disco", sendData={},callback=function(data,status) {
-        // action to run after reload
-        $("#responseMsg").html(data['message']);
-    });
-});
-
-$("#updateAct").click(function(){
-    $("#responseMsg").removeClass("hidden");
-    ajaxCall(url="/api/phpipamagent/service/update", sendData={},callback=function(data,status) {
-        // action to run after reload
-        $("#responseMsg").html(data['message']);
-    });
-});
-
+        $("#discoAct").click(function(){
+            $("#responseMsg").addClass("hidden");
+            $("#responseMsg").html("");
+            ajaxCall(url="/api/phpipamagent/service/disco", sendData={},callback=function(data,status) {
+                $("#responseMsg").removeClass("hidden");
+                $("#responseMsg").html(data['message'].replace(/\n/g,'<br/>'));
+            });
+        });
+        $("#updateAct").click(function(){
+            $("#responseMsg").addClass("hidden");
+            $("#responseMsg").html("");
+            ajaxCall(url="/api/phpipamagent/service/update", sendData={},callback=function(data,status) {
+                $("#responseMsg").removeClass("hidden");
+                $("#responseMsg").html(data['message'].replace(/\n/g,'<br/>'));
+            });
+        });
     });
 </script>
 
