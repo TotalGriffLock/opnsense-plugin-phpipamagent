@@ -1,5 +1,5 @@
 # opnsense-plugin-phpipamagent
-A plugin for OPNsense to run the PHP IPAM agent directly on the firewall
+A plugin for OPNsense to run the PHP IPAM scan agent directly on the firewall
 
 ## Description
 This plugin uses the phpIPAM agent from https://github.com/phpipam/phpipam-agent/ and deploys it onto an OPNsense firewall as a plugin.
@@ -12,17 +12,15 @@ For now, this is not bundled as a plugin, so to install get a shell on your OPNs
 ```
 cd ~
 rm -Rf opnsense-plugin-phpipamagent
-rm -Rf phpipam-agent
+rm -Rf /usr/local/opnsense/scripts/phpipamagent
 pkg install git
 pkg install fping
 git clone --recursive https://github.com/TotalGriffLock/opnsense-plugin-phpipamagent opnsense-plugin-phpipamagent
-git clone --recursive https://github.com/phpipam/phpipam-agent/ phpipam-agent
+git clone --recursive https://github.com/phpipam/phpipam-agent/ /usr/local/opnsense/scripts/phpipamagent
 echo y | sh opnsense-plugin-phpipamagent/FreeBSD_sideload.sh php82-gmp
 echo y | sh opnsense-plugin-phpipamagent/FreeBSD_sideload.sh php82-pdo_mysql
 echo y | sh opnsense-plugin-phpipamagent/FreeBSD_sideload.sh php82-iconv
 echo y | sh opnsense-plugin-phpipamagent/FreeBSD_sideload.sh php82-posix
-rm -Rf /usr/local/opnsense/scripts/phpipamagent
-mv phpipam-agent /usr/local/opnsense/scripts/phpipamagent
 cp -R ~/opnsense-plugin-phpipamagent/src/opnsense /usr/local/
 service configd restart
 configctl service restart webgui
@@ -30,7 +28,9 @@ configctl service restart webgui
 
 ## Building The Plugin
 To build the plugin from source:
+
 Set up OPNsense tools as per https://github.com/opnsense/tools - you can do this on an OPNsense VM or a FreeBSD box
+
 Run the following commands in the tools environment
 ```
 cd /usr/plugins/devel/
