@@ -17,7 +17,7 @@ $config['db']['port'] = {{ OPNsense.phpipamagent.general.DBPort|default("") }};
 $config['key'] = "{{ OPNsense.phpipamagent.general.AgentCode|default("") }}";
 $config['threads']  = {{ OPNsense.phpipamagent.general.Threads|default("") }};
 $config['reset_autodiscover_addresses'] = {{ OPNsense.phpipamagent.general.ResetAutodiscover|default("") }};
-$config['remove_inactive_dhcp']         = {{ OPNsense.phpipamagent.general.RemoveInactiveDHCP|default("") }};;
+$config['remove_inactive_dhcp']         = {{ OPNsense.phpipamagent.general.RemoveInactiveDHCP|default("") }};
 
 // SSL Stuff
 $config['db']['ssl']        = false;
