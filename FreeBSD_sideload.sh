@@ -1,4 +1,7 @@
 #!/bin/sh
+# THIS IS NOT MY CODE!
+# This script was taken from:
+# https://medium.com/@mihakralj/the-direct-route-installing-freebsd-packages-on-opnsense-d002ac0c56b8
 
 # Initialize variables to keep track of processed packages and URLs
 processed_deps=""
