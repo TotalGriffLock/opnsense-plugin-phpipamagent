@@ -27,12 +27,11 @@ configctl service restart webgui
 ```
 To manually update an existing manual installation
 ```
-cd ~
-rm -Rf opnsense-plugin-phpipamagent
 rm -Rf /usr/local/opnsense/scripts/phpipamagent
-git clone --recursive https://github.com/TotalGriffLock/opnsense-plugin-phpipamagent opnsense-plugin-phpipamagent
 git clone --recursive https://github.com/phpipam/phpipam-agent/ /usr/local/opnsense/scripts/phpipamagent
-cp -R ~/opnsense-plugin-phpipamagent/src/opnsense /usr/local/
+cd ~/opnsense-plugin-phpipamagent
+git pull
+cp -R src/opnsense /usr/local/
 service configd restart
 configctl service restart webgui
 ```
