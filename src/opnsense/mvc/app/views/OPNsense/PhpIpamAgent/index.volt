@@ -38,10 +38,11 @@
             });
         });
         $("#phpipamagent.general.SSL").click(function(){
+alert("button clicked");
             if($("#phpipamagent.general.SSL").is(':checked'))
-                $("#phpipamagent.general.SSLVerify").parents("tr").removeClass("hidden");
+                $("#select_phpipamagent.general.SSLCA").parents("tr").removeClass("hidden");
             else
-                $("#phpipamagent.general.SSLVerify").parents("tr").addClass("hidden");
+                $("#select_phpipamagent.general.SSLCA").parents("tr").addClass("hidden");
 
         });
     });
