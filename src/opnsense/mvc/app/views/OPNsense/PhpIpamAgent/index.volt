@@ -37,7 +37,7 @@
                 $("#responseMsg").html(data['message'].replace(/\n/g,'<br/>'));
             });
         });
-        $("#phpipamagent.general.SSL").onchange(function(){
+        $("#phpipamagent.general.SSL").click(function(){
             if($("#phpipamagent.general.SSL").is(':checked'))
                 $("#hidessl").removeClass("hidden");
             else
