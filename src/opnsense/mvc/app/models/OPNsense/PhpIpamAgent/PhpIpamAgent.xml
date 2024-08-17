@@ -1,7 +1,7 @@
 <model>
     <mount>//OPNsense/phpipamagent</mount>
     <description>Scanning agent for phpIPAM</description>
-    <version>0.0.4</version>
+    <version>0.0.5</version>
     <items>
         <general>
             <DBHost type="HostnameField">
@@ -27,18 +27,43 @@
             <SSL type="BooleanField">
                 <Required>Y</Required>
                 <Default>0</Default>
+                <Constraints>
+                    <check001>
+                        <type>DependConstraint</type>
+                        <addFields>
+                            <field1>SSLCert</field1>
+                            <field2>SSLCA</field2>
+                            <field3>SSLCipher</field3>
+                        </addFields>
+                      </check001>
+                </Constraints>
             </SSL>
             <SSLCert type="CertificateField">
                 <Required>N</Required>
                 <Type>cert</Type>
+                <Constraints>
+                    <check001>
+                        <reference>SSL.check001</reference>
+                    </check001>
+                </Constraints>
             </SSLCert>
             <SSLCA type="CertificateField">
                 <Required>N</Required>
                 <Type>ca</Type>
+                <Constraints>
+                    <check001>
+                        <reference>SSL.check001</reference>
+                    </check001>
+                </Constraints>
             </SSLCA>
             <SSLCipher type="TextField">
                 <Required>N</Required>
                 <Default>DHE-RSA-AES256-SHA:AES128-SHA</Default>
+                <Constraints>
+                    <check001>
+                        <reference>SSL.check001</reference>
+                    </check001>
+                </Constraints>
             </SSLCipher>
             <SSLVerify type="BooleanField">
                 <Required>Y</Required>
