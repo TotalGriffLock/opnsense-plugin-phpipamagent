@@ -11,8 +11,15 @@ class ServiceController extends ApiControllerBase
     $status = "failed";
     if ($this->request->isPost()) {
         $backend = new Backend();
-        $bckresult = trim($backend->configdRun("template reload OPNsense/PhpIpamAgent"));
+        $bckresul1 = trim($backend->configdRun("template reload OPNsense/PhpIpamAgent"));
         if ($bckresult == "OK") {
+            $status1 = "ok";
+        }
+        $bckresult = trim($backend->configdRun("phpipamagent phpipamagentconfssl"));
+        if ($bckresult == "OK") {
+            $status2 = "ok";
+        }
+        if ($status1 == "ok" && $status2 == "ok") {
             $status = "ok";
         }
     }
