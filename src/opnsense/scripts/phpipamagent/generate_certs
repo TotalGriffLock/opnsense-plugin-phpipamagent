@@ -12,7 +12,7 @@ require_once("certs.inc");
 $store = new OPNsense\Trust\Store();
 @mkdir("/usr/local/etc/phpipamagent/", 0700, true);
 $config = (new OPNsense\PhpIpamAgent\PhpIpamAgent())->general;
-if ($config->SSL == true) {
+if ($config->SSL == "1") {
     $cert = $store->getCertificate((string)$config->SSLCert);
     if ($cert && isset($cert['prv'])) {
         file_put_contents("/usr/local/etc/phpipamagent/server.key", $cert['prv']);
@@ -25,7 +25,7 @@ if ($config->SSL == true) {
 }
 
 // cleanup certs if ssl disabled
-if ($config->SSL != true) {
+if ($config->SSL != "1") {
   unlink("/usr/local/etc/phpipamagent/server.key");
   unlink("/usr/local/etc/phpipamagent/server.crt");
   unlink("/usr/local/etc/phpipamagent/ca.crt");
