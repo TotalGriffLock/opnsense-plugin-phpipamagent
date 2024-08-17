@@ -38,7 +38,6 @@
             });
         });
         $("#phpipamagent\\.general\\.SSL").click(function(){
-            alert("button clicked");
             if($("#phpipamagent\\.general\\.SSL").is(':checked'))
                 $("input[class*='hidessl']").parents("tr").removeClass("hidden");
             else
