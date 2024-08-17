@@ -26,7 +26,7 @@
             </AgentCode>
             <SSL type="BooleanField">
                 <Required>Y</Required>
-                <Default>false</Default>
+                <Default>0</Default>
             </SSL>
             <SSLCert type="CertificateField">
                 <Required>N</Required>
@@ -38,7 +38,7 @@
             </SSLCA>
             <SSLVerify type="BooleanField">
                 <Required>Y</Required>
-                <Default>false</Default>
+                <Default>0</Default>
             </SSLVerify>
             <Threads type="NumericField">
                 <Required>Y</Required>
@@ -46,11 +46,11 @@
             </Threads>
             <ResetAutodiscover type="BooleanField">
                 <Required>Y</Required>
-                <Default>false</Default>
+                <Default>0</Default>
             </ResetAutodiscover>
             <RemoveInactiveDHCP type="BooleanField">
                 <Required>Y</Required>
-                <Default>false</Default>
+                <Default>0</Default>
             </RemoveInactiveDHCP>        
         </general>
     </items>
