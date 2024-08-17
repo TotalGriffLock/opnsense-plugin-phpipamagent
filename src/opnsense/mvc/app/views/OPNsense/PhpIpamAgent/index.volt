@@ -37,6 +37,12 @@
                 $("#responseMsg").html(data['message'].replace(/\n/g,'<br/>'));
             });
         });
+        $("#phpipamagent.general.SSL").onchange(function(){
+            if($("#phpipamagent.general.SSL").is(':checked'))
+                $("#hidessl").removeClass("hidden");
+            else
+                $("#hidessl").addClass("hidden");
+        });
     });
 </script>
 
