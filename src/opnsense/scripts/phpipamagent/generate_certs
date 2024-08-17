@@ -11,7 +11,7 @@ require_once("certs.inc");
 
 $store = new OPNsense\Trust\Store();
 @mkdir("/usr/local/etc/phpipamagent/", 0700, true);
-$config = new OPNsense\PhpIpamAgent\PhpIpamAgent()->general;
+$config = (new OPNsense\PhpIpamAgent\PhpIpamAgent())->general;
 if ($config->SSL == true)
     $cert = $store->getCertificate((string)$config->SSLCert);
     if ($cert && isset($cert['prv'])) {
