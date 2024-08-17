@@ -27,23 +27,16 @@
             <SSL type="BooleanField">
                 <Required>Y</Required>
                 <Default>0</Default>
-                <Constraints>
-                    <check001>
-                        <type>DependConstraint</type>
-                        <addFields>
-                            <field1>SSLCert</field1>
-                            <field2>SSLCA</field2>
-                            <field3>SSLCipher</field3>
-                        </addFields>
-                      </check001>
-                </Constraints>
             </SSL>
             <SSLCert type="CertificateField">
                 <Required>N</Required>
                 <Type>cert</Type>
                 <Constraints>
                     <check001>
-                        <reference>SSL.check001</reference>
+                        <ValidationMessage>This field must be set if you wish to use SSL.</ValidationMessage>
+                        <type>SetIfConstraint</type>
+                        <field>SSL</field>
+                        <check>1</check>
                     </check001>
                 </Constraints>
             </SSLCert>
@@ -52,7 +45,10 @@
                 <Type>ca</Type>
                 <Constraints>
                     <check001>
-                        <reference>SSL.check001</reference>
+                        <ValidationMessage>This field must be set if you wish to use SSL.</ValidationMessage>
+                        <type>SetIfConstraint</type>
+                        <field>SSL</field>
+                        <check>1</check>
                     </check001>
                 </Constraints>
             </SSLCA>
@@ -61,7 +57,10 @@
                 <Default>DHE-RSA-AES256-SHA:AES128-SHA</Default>
                 <Constraints>
                     <check001>
-                        <reference>SSL.check001</reference>
+                        <ValidationMessage>This field must be set if you wish to use SSL.</ValidationMessage>
+                        <type>SetIfConstraint</type>
+                        <field>SSL</field>
+                        <check>1</check>
                     </check001>
                 </Constraints>
             </SSLCipher>
