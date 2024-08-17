@@ -16,15 +16,15 @@ $config['db']['name'] = "{{ OPNsense.phpipamagent.general.DBName|default("") }}"
 $config['db']['port'] = {{ OPNsense.phpipamagent.general.DBPort|default("") }};
 $config['key'] = "{{ OPNsense.phpipamagent.general.AgentCode|default("") }}";
 $config['threads']  = {{ OPNsense.phpipamagent.general.Threads|default("") }};
-$config['reset_autodiscover_addresses'] = {{ OPNsense.phpipamagent.general.ResetAutodiscover|default("") }};
-$config['remove_inactive_dhcp']         = {{ OPNsense.phpipamagent.general.RemoveInactiveDHCP|default("") }};
+$config['reset_autodiscover_addresses'] = {{ OPNsense.phpipamagent.general.ResetAutodiscover|default(0) }};
+$config['remove_inactive_dhcp']         = {{ OPNsense.phpipamagent.general.RemoveInactiveDHCP|default(0) }};
 
 // SSL Stuff
-$config['db']['ssl']        = false;
+$config['db']['ssl']        = {{ OPNsense.phpipamagent.general.SSL|default(0) }};
 $config['db']['ssl_key']    = '/path/to/cert.key';
 $config['db']['ssl_cert']   = '/path/to/cert.crt';
 $config['db']['ssl_ca']     = '/path/to/ca.crt';
 $config['db']['ssl_capath'] = '/path/to/ca_certs';
-$config['db']['ssl_cipher'] = 'DHE-RSA-AES256-SHA:AES128-SHA';
-$config['db']['ssl_verify'] = true; 
+$config['db']['ssl_cipher'] = '{{ OPNsense.phpipamagent.general.SSLCipher|default("DHE-RSA-AES256-SHA:AES128-SHA") }}';
+$config['db']['ssl_verify'] = {{ OPNsense.phpipamagent.general.SSLVerify|default(0) }}; 
 {% endif %}
