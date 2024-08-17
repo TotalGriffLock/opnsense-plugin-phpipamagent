@@ -5,7 +5,14 @@
     $( document ).ready(function() {
         var data_get_map = {'frm_GeneralSettings':"/api/phpipamagent/settings/get"};
         mapDataToFormUI(data_get_map).done(function(data){
-            // place actions to run after load, for example update form styles.
+            if($("#phpipamagent\\.general\\.SSL").is(':checked'))
+                $("[class*='hidessl']").each(function(i, obj) {
+                    $(this).parents("tr").removeClass("hidden");
+                });
+            else
+                $("[class*='hidessl']").each(function(i, obj) {
+                    $(this).parents("tr").addClass("hidden");
+                });
         });
 
         // link save button to API set action
