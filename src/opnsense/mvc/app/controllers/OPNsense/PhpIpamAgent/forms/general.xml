@@ -12,7 +12,7 @@
     </field>
     <field>
         <type>header</type>
-        <label>Database Settings</label>
+        <label>Database General Settings</label>
     </field>
     <field>
         <id>phpipamagent.general.DBHost</id>
@@ -49,6 +49,34 @@
         <type>text</type>
         <help>Name of the MySQL IPAM database</help>
         <ValidationMessage>Please enter a valid database name</ValidationMessage>
+    </field>
+    <field>
+        <type>header</type>
+        <label>Database SSL Settings</label>
+    </field>
+    <field>
+        <id>phpipamagent.general.SSL</id>
+        <label>Connect to MySQL using SSL</label>
+        <type>checkbox</type>
+        <help>Use certificates and SSL to verify and encrypt data transfer between the agent and the database</help>
+    </field>
+    <field>
+        <id>phpipamagent.general.SSLCert</id>
+        <label>Client Certificate</label>
+        <type>dropdown</type>
+        <help>Select a certificate to use</help>
+    </field>
+    <field>
+        <id>phpipamagent.general.SSLCA</id>
+        <label>CA Certificate</label>
+        <type>dropdown</type>
+        <help>Select a CA certificate</help>
+    </field>
+    <field>
+        <id>phpipamagent.general.SSLVerify</id>
+        <label>Verify Server Certificate</label>
+        <type>checkbox</type>
+        <help>Verify server certificate identity against selected CA</help>
     </field>
     <field>
         <type>header</type>
