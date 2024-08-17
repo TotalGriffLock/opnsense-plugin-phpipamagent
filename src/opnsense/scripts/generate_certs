@@ -1,0 +1,32 @@
+#!/usr/local/bin/php
+<?php
+
+// This is all nicked from
+// /usr/local/opnsense/scripts/syslog/generate_certs
+
+/* XXX use legacy code to generate certs and CAs */
+
+require_once("config.inc");
+require_once("certs.inc");
+
+$store = new OPNsense\Trust\Store();
+@mkdir("/usr/local/etc/phpipamagent/", 0700, true);
+$config = new OPNsense\PhpIpamAgent\PhpIpamAgent()->general;
+if ($config->SSL == true)
+    $cert = $store->getCertificate((string)$config->SSLCert);
+    if ($cert && isset($cert['prv'])) {
+        file_put_contents("/usr/local/etc/phpipamagent/server.key", $cert['prv']);
+        file_put_contents("/usr/local/etc/phpipamagent/server.crt", $cert['crt']);
+    }
+    $cacert = $store->getCertificate((string)$config->SSLCA);
+    if ($cert) {
+        file_put_contents("/usr/local/etc/phpipamagent/ca.crt", $cert['crt']);
+    }
+}
+
+// cleanup certs if ssl disabled
+if ($config->SSL != true) {
+  unlink("/usr/local/etc/phpipamagent/server.key");
+  unlink("/usr/local/etc/phpipamagent/server.crt");
+  unlink("/usr/local/etc/phpipamagent/ca.crt");
+}
