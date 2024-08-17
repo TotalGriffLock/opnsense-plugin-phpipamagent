@@ -1,7 +1,7 @@
 <model>
     <mount>//OPNsense/phpipamagent</mount>
     <description>Scanning agent for phpIPAM</description>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <items>
         <general>
             <DBHost type="HostnameField">
@@ -24,6 +24,22 @@
             <AgentCode type="TextField">
                 <Required>Y</Required>
             </AgentCode>
+            <SSL type="BooleanField">
+                <Required>Y</Required>
+                <Default>false</Default>
+            </SSL>
+            <SSLCert type="CertificateField">
+                <Required>N</Required>
+                <Type>cert</Type>
+            </SSLCert>
+            <SSLCA type="CertificateField">
+                <Required>N</Required>
+                <Type>ca</Type>
+            </SSLCA>
+            <SSLVerify type="BooleanField">
+                <Required>Y</Required>
+                <Default>false</Default>
+            </SSLVerify>
             <Threads type="NumericField">
                 <Required>Y</Required>
                 <Default>32</Default>
