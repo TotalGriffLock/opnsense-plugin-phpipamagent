@@ -39,9 +39,10 @@
         });
         $("#phpipamagent.general.SSL").click(function(){
             if($("#phpipamagent.general.SSL").is(':checked'))
-                $("#row_phpipamagent.general.SSLVerify").removeClass("hidden");
+                $("#phpipamagent.general.SSLVerify").parents("tr").removeClass("hidden");
             else
-                $("#row_phpipamagent.general.SSLVerify").addClass("hidden");
+                $("#phpipamagent.general.SSLVerify").parents("tr").addClass("hidden");
+
         });
     });
 </script>
