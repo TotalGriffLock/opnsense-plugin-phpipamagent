@@ -15,7 +15,7 @@ class ServiceController extends ApiControllerBase
         if ($bckresult == "OK") {
             $status1 = "ok";
         }
-        $bckresult = trim($backend->configdRun("phpipamagent phpipamagentconfssl"));
+        $bckresult = trim($backend->configdRun("phpipamagent phpipamagentsslconf"));
         if ($bckresult == "OK") {
             $status2 = "ok";
         }
