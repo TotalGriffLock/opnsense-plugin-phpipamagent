@@ -27,6 +27,17 @@
             <SSL type="BooleanField">
                 <Required>Y</Required>
                 <Default>0</Default>
+                <Constraints>
+                    <check001>
+                        <reference>SSLCert.check001</reference>
+                    </check001>
+                    <check002>
+                        <reference>SSLCA.check001</reference>
+                    </check002>
+                    <check003>
+                        <reference>SSLCipher.check001</reference>
+                    </check003>
+                </Constraints>
             </SSL>
             <SSLCert type="CertificateField">
                 <Required>N</Required>
