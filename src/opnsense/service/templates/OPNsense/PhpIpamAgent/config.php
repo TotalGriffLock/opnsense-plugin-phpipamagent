@@ -21,7 +21,7 @@ $config['remove_inactive_dhcp']         = {{ OPNsense.phpipamagent.general.Remov
 
 // SSL Stuff
 $config['db']['ssl']        = {{ OPNsense.phpipamagent.general.SSL|default(0) }};
-{% if OPNsense.phpipamagent.general.SSL|default(0) == 1 %}
+{% if OPNsense.phpipamagent.general.SSL|default(0) == '1' %}
 $config['db']['ssl_key']    = '/usr/local/etc/phpipamagent/server.key';
 $config['db']['ssl_cert']   = '/usr/local/etc/phpipamagent/server.crt';
 $config['db']['ssl_ca']     = '/usr/local/etc/phpipamagent/ca.crt';
