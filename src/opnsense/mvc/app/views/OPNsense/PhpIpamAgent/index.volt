@@ -39,11 +39,11 @@
         });
         $("#phpipamagent\\.general\\.SSL").click(function(){
             if($("#phpipamagent\\.general\\.SSL").is(':checked'))
-                $("input[class*='hidessl']").each(function(i, obj) {
+                $("[class*='hidessl']").each(function(i, obj) {
                     $(this).parents("tr").removeClass("hidden");
                 });
             else
-                $("input[class*='hidessl']").each(function(i, obj) {
+                $("[class*='hidessl']").each(function(i, obj) {
                     $(this).parents("tr").addClass("hidden");
                 });
         });
