@@ -65,18 +65,21 @@
         <label>Client Certificate</label>
         <type>dropdown</type>
         <help>Select a certificate to use</help>
+        <style>hidessl</style>
     </field>
     <field>
         <id>phpipamagent.general.SSLCA</id>
         <label>CA Certificate</label>
         <type>dropdown</type>
         <help>Select a CA certificate</help>
+        <style>hidessl</style>
     </field>
     <field>
         <id>phpipamagent.general.SSLVerify</id>
         <label>Verify Server Certificate</label>
         <type>checkbox</type>
         <help>Verify server certificate identity against selected CA</help>
+        <style>hidessl</style>
     </field>
     <field>
         <type>header</type>
