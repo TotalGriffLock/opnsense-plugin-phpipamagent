@@ -1,7 +1,7 @@
 <model>
     <mount>//OPNsense/phpipamagent</mount>
     <description>Scanning agent for phpIPAM</description>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <items>
         <general>
             <DBHost type="HostnameField">
@@ -36,6 +36,10 @@
                 <Required>N</Required>
                 <Type>ca</Type>
             </SSLCA>
+            <SSLCipher type="TextField">
+                <Required>N</Required>
+                <Default>DHE-RSA-AES256-SHA:AES128-SHA</Default>
+            </SSLCipher>
             <SSLVerify type="BooleanField">
                 <Required>Y</Required>
                 <Default>0</Default>
