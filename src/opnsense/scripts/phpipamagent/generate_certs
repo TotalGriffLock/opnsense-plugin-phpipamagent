@@ -20,7 +20,7 @@ if ($config->SSL == "1") {
     }
     $cacert = $store->getCACertificate((string)$config->SSLCA);
     if ($cacert) {
-        file_put_contents("/usr/local/etc/phpipamagent/ca.crt", $cacert['crt']);
+        file_put_contents("/usr/local/etc/phpipamagent/ca.crt", $cacert['cert']);
     }
 }
 
