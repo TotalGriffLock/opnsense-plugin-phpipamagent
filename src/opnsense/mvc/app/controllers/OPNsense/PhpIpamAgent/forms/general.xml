@@ -79,6 +79,7 @@
         <label>SSL Cipher String</label>
         <type>text</type>
         <help>List of SSL Ciphers in OpenSSL Format</help>
+        <style>hidessl</style>
     </field>
     <field>
         <id>phpipamagent.general.SSLVerify</id>
