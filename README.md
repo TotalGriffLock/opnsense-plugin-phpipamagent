@@ -45,10 +45,11 @@ Run the following commands in the tools environment
 cd /usr/plugins/devel/
 git clone --recursive https://github.com/TotalGriffLock/opnsense-plugin-phpipamagent /usr/plugins/devel/phpipamagent
 git clone --recursive https://github.com/phpipam/phpipam-agent /usr/plugins/devel/phpipamagent/src/opnsense/scripts/phpipamagent
-cd /usr/tools
-make plugins
+cd /usr/plugins/devel/phpipamagent
+rm -Rf .git .gitignore FreeBSD_sideload.sh LICENSE README.md
+make package
 ```
-This should result in /
+This should result in /usr/plugins/devel/phpipamagent/work/pkg/os-phpipamagent-<version>.pkg
 ## Usage
 Create the scan agent in phpIPAM's Administration menu
 
